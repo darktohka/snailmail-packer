@@ -186,11 +186,13 @@ CFG_SIZE = 196  # 0xC4 bytes
 #  +0x14  u32     _pad_14               Initialised to 0, no code refs
 #  +0x18  u32     _pad_18               Initialised to 0, no code refs
 #  +0x1C  u32     level_flags           Bitfield (default 0x5FE). Bits:
-#                                         0x001 – enable feature set A
+#                                         0x001 – animated wavy background distortion
+#                                                  (sin/cos ripple on 8×8 quad grid)
 #                                         0x004 – starfield enabled
 #                                         0x010 – particle effects enabled
 #                                         0x020 – extra level feature
-#                                         0x080 – unknown feature
+#                                         0x080 – alpha blending enabled for sprites
+#                                                  (D3D SrcAlpha/InvSrcAlpha; off=opaque)
 #                                         0x100 – text layout flag
 #                                         0x400 – 32-bit colour (else 16-bit)
 #                                       Saved/restored from per-level data.
